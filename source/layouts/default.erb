@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%= current_page.data.title %> | CSS OFF 2013 | Per Arnborg</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="<%= current_page.data.description %>">
+		<%= stylesheet_link_tag "application" %>
+		<%= javascript_include_tag "libs/modernizr", type: nil %>
+	</head>
+	<body>
+
+		<div class="wrapper">
+			<%= partial "partials/header" %>
+
+			<main role="main"><!-- Main -->
+				<%= yield %>
+			</main><!-- /Main -->
+			<%= partial "partials/footer" if !current_page.data.hide_footer %>
+		</div>
+
+  	<!--[if lt IE 9]>
+  		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  		<script>window.jQuery || document.write('<%= javascript_include_tag("libs/jquery-1.10.2.min.js", type: nil).sub! "</script>", "<\\/script>" %>')</script>
+  		<%= javascript_include_tag "desktop/ie8/js/libs/selectivizr-min" %>
+  	<![endif]-->
+  	<!--[if gte IE 9]><!-->
+  		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  		<script>window.jQuery || document.write('<%= javascript_include_tag("libs/jquery-2.0.3.min.js", type: nil).sub! "</script>", "<\\/script>" %>')</script>
+  	<!--<![endif]-->
+
+		<%= javascript_include_tag "application", type: nil %>
+
+	</body>
+</html>

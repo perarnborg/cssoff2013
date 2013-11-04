@@ -1,0 +1,30 @@
+// Page layout
+$wrapper-width-desktop: 960px;
+$vertical-scroll-breakpoint-desktop: 1001px;
+
+// Layout
+$max-width: 320px;
+$header-height: 55px;
+$main-nav-width: 259px;
+
+// Grid settings
+$grid-columns: 32;
+$grid-width: 100% / $grid-columns;
+
+// Colors
+$gray: #ccc;
+
+// Spacing
+
+// Fonts
+$font-serif: "Times New Roman", Times, serif;
+$font-sansserif: Arial, Helvetica, sans-serif;
+
+// Transitions
+$ui-animation-speed: 0.2s;
+
+// Visual fx
+$no-opacity: 1;
+$hover-opacity: 0.85;
+$selected-opacity: 0.5;
+$light-opacity: 0.3;

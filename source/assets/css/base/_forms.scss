@@ -1,0 +1,22 @@
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+textarea {
+  @include box-sizing(border-box);
+  padding: 11px 10px;
+  @include placeholder {
+    color: $gray;
+  }
+}
+
+input[type=submit],
+input[type=button],
+.button {
+  &:hover {
+  }
+  &.button-secondary {
+    &:hover {
+    }
+  }
+}
